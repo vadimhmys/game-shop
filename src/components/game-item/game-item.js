@@ -1,5 +1,7 @@
 import React from "react";
 import { GameCover } from '../../components/game-cover'
+import { GameBuy } from '../../components/game-buy'
+
 import "./game-item.css";
 
 export const GameItem = ({ game }) => {
@@ -13,7 +15,9 @@ export const GameItem = ({ game }) => {
             game.genres.map(genre => genre)
           }
         </div>
-        <div className="game-item__buy">Buy</div>
+        <div className="game-item__buy">
+          <GameBuy game={game}/>
+        </div>
       </div>
     </div>
   );
