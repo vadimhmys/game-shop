@@ -12,7 +12,7 @@ export const CartBlock = () => {
   return (
     <div className="cart-block">
       <BiCartAlt size={25} className="cart-block__icon"/>
-      <span className="cart-block__total-price">{ totalPrice } руб.</span>
+      { totalPrice > 0 && <span className="cart-block__total-price">{ totalPrice } руб.</span> }
       <CartMenu items={items} onClick={() => null}/>
     </div>
   );
