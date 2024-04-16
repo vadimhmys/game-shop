@@ -12,7 +12,7 @@ export const GameItem = ({ game }) => {
   const dispatch = useDispatch();
   const handleClick = () => {
     dispatch(setCurrentGame(game));
-    navigate(`/api/${game.title}`);
+    navigate(`/app/${game.title}`);
   };
   return (
     <div className="game-item" onClick={ handleClick }>
