@@ -1,6 +1,7 @@
 import React from 'react'
 import { useSelector } from 'react-redux';
 import { calcTotalPrice } from '../../components/utils';
+import { OrderItem } from '../../components/order-item/order-item';
 import './order-page.css'
 
 export const OrderPage = () => {
@@ -18,7 +19,7 @@ export const OrderPage = () => {
       <div className='order-page__right'>
         <div className='order-page__total-price'>
           <span>
-            {items.length} товаров на сумму { calcTotalPrice() } руб.
+            {items.length} товаров на сумму { calcTotalPrice(items) } руб.
           </span>
         </div>
       </div>
